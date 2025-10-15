@@ -99,13 +99,29 @@ section h3 {
 
 /* subtle bullet on the left of each pill */
 .participants-list li::before {
-  content: "•";
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  /* remove decorative bullet - hidden to match request */
+  content: none;
+}
+
+/* delete button inside participant pill */
+.participants-list li {
+  padding-right: 8px; /* space for the delete button */
+}
+
+.delete-participant {
+  border: none;
+  background: transparent;
   color: #024c9c;
-  font-size: 0.95rem;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.delete-participant:hover {
+  background: rgba(2,76,156,0.08);
 }
 
 /* message / no participants text */
