@@ -65,13 +65,54 @@ section h3 {
   background-color: #f9f9f9;
 }
 
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+/* Participants section styling */
+.participants-section {
+  margin-top: 10px;
+  font-size: 0.95rem;
 }
 
-.activity-card p {
-  margin-bottom: 8px;
+.participants-section strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #1a237e;
+}
+
+/* pill-like participant list */
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.participants-list li {
+  background: #eef6ff;
+  color: #024c9c;
+  padding: 6px 10px 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  position: relative;
+  box-shadow: 0 1px 0 rgba(2, 76, 156, 0.06);
+}
+
+/* subtle bullet on the left of each pill */
+.participants-list li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #024c9c;
+  font-size: 0.95rem;
+}
+
+/* message / no participants text */
+.no-participants {
+  margin: 0;
+  color: #666;
+  font-style: italic;
 }
 
 .form-group {
